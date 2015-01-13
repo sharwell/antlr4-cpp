@@ -10,6 +10,7 @@ namespace antlr4 {
 namespace runtime {
 namespace atn {
 
+	class grammar_atn;
 	class transition;
 
 	class atn_state abstract
@@ -37,6 +38,7 @@ namespace atn {
 		const size_t _state_number;
 		const size_t _rule_index;
 
+		std::shared_ptr<grammar_atn> _atn;
 		bool _epsilon_only_transitions;
 		bool _optimized;
 
@@ -69,6 +71,11 @@ namespace atn {
 		size_t rule_index() const
 		{
 			return _rule_index;
+		}
+
+		std::shared_ptr<grammar_atn> const& atn() const
+		{
+			return _atn;
 		}
 
 		bool only_has_epsilon_transitions() const
