@@ -53,7 +53,7 @@ namespace dfa {
 
 		accept_state_information _accept_state_information;
 
-		const size_t _min_dfa_edge;
+		const int32_t _min_dfa_edge;
 		std::vector<std::shared_ptr<dfa_state>> _edges;
 
 		std::vector<std::shared_ptr<dfa_state>> _context_edges;

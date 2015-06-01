@@ -46,6 +46,9 @@
     <Filter Include="Source Files\runtime\dfa">
       <UniqueIdentifier>{5886bdfd-8472-4a65-8261-83806ba6a66b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\runtime\xpath">
+      <UniqueIdentifier>{258a1063-ff1b-47bd-b9b8-1a003173ca24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -159,11 +162,17 @@
     <ClInclude Include="antlr\test\test_interval_set.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\atn_simulator.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\dfa\accept_state_information.hpp">
       <Filter>Header Files\runtime\dfa</Filter>
     </ClInclude>
     <ClInclude Include="antlr\v4\runtime\misc\uuid.hpp">
       <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\common_token_stream.hpp">
+      <Filter>Header Files\runtime</Filter>
     </ClInclude>
     <ClInclude Include="antlr\v4\runtime\token.hpp">
       <Filter>Header Files\runtime</Filter>
@@ -171,8 +180,14 @@
     <ClInclude Include="antlr\v4\runtime\misc\interval_set.hpp">
       <Filter>Header Files\runtime\misc</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\lexer.hpp">
+      <Filter>Header Files\runtime</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\misc\to_string.hpp">
       <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\xpath\xpath_lexer.hpp">
+      <Filter>Header Files\runtime\xpath</Filter>
     </ClInclude>
     <ClInclude Include="antlr\test\test_interval_set.hpp">
       <Filter>Header Files\test</Filter>
@@ -240,6 +255,12 @@
       <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
     <ClCompile Include="antlr\v4\runtime\dfa\dynamic_dfa.cpp">
+      <Filter>Source Files\runtime\dfa</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\atn_simulator.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\dfa\dfa_state.cpp">
       <Filter>Source Files\runtime\dfa</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,14 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -88,6 +88,7 @@
     <ClInclude Include="antlr\v4\runtime\atn\atn_configuration_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_deserialization_options.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_deserializer.hpp" />
+    <ClInclude Include="antlr\v4\runtime\atn\atn_simulator.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_type.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\conflict_information.hpp" />
@@ -98,9 +99,11 @@
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\transition.hpp" />
+    <ClInclude Include="antlr\v4\runtime\common_token_stream.hpp" />
     <ClInclude Include="antlr\v4\runtime\dfa\accept_state_information.hpp" />
     <ClInclude Include="antlr\v4\runtime\dfa\dfa_state.hpp" />
     <ClInclude Include="antlr\v4\runtime\dfa\dynamic_dfa.hpp" />
+    <ClInclude Include="antlr\v4\runtime\lexer.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\interval_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp" />
@@ -116,6 +119,7 @@
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_listener.hpp" />
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_visitor.hpp" />
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_walker.hpp" />
+    <ClInclude Include="antlr\v4\runtime\xpath\xpath_lexer.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -127,10 +131,9 @@
     <ClCompile Include="antlr\v4\runtime\atn\atn_configuration.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="antlr\v4\runtime\atn\atn_configuration_set.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\atn_configuration_set.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\atn_deserializer.cpp" />
+    <ClCompile Include="antlr\v4\runtime\atn\atn_simulator.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\atn_state.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\conflict_information.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\grammar_atn.cpp" />
@@ -140,6 +143,7 @@
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context_cache.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\semantic_context.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\transition.cpp" />
+    <ClCompile Include="antlr\v4\runtime\dfa\dfa_state.cpp" />
     <ClCompile Include="antlr\v4\runtime\dfa\dynamic_dfa.cpp" />
     <ClCompile Include="antlr\v4\runtime\tree\parse_tree.cpp" />
     <ClCompile Include="antlr\v4\runtime\tree\parse_tree_walker.cpp" />
